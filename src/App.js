@@ -1,9 +1,15 @@
 import React from "react";
 
-import Header from "./components/Header";
+import Header from "./components/home/Header";
+import About from "./components/about/About";
 
 function App() {
-  return <Header></Header>;
+  return (
+    <div>
+      <Header></Header>
+      <About></About>
+    </div>
+  );
 }
 
 export default App;

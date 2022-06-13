@@ -5,8 +5,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  poaition: relative;
   flex-direction: column;
   gap: 30px;
+  margin-top: 10%;
 
   h1 {
     text-align: center;
@@ -17,14 +19,21 @@ const Container = styled.div`
     text-align: center;
     max-width: 40%;
   }
+
+  div {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
 `;
 
 const Social = styled.ul`
   background-color: orange;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
   list-style-type: none;
   padding: 0;
   width: 20%;
@@ -62,9 +71,11 @@ const Intro = () => {
           </a>
         </li>
       </Social>
-      <a>
-        <i class="fa-solid fa-circle-chevron-down"></i>
-      </a>
+      <div>
+        <a>
+          <i class="fa-solid fa-circle-chevron-down fa-2xl"></i>
+        </a>
+      </div>
     </Container>
   );
 };
