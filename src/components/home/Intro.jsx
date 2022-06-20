@@ -10,16 +10,21 @@ const Container = styled.div`
   margin-top: 10%;
 
   h1 {
+    color: ${(props) => props.theme.extraLight};
     text-align: center;
     font-size: 6em;
   }
 
   h3 {
+    color: ${(props) => props.theme.extraMid};
     text-align: center;
-    max-width: 40%;
+    max-width: 700px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   div {
+    color: ${(props) => props.theme.extraLight};
     position: absolute;
     bottom: 0;
     margin-bottom: 20px;
@@ -27,7 +32,7 @@ const Container = styled.div`
 `;
 
 const Social = styled.ul`
-  background-color: orange;
+  color: ${(props) => props.theme.extraLight};
   display: flex;
   flex-direction: row;
   justify-content: center;

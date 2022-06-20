@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Experience from "./Experience";
 
 const StyledSection = styled.section`
-  background-color: orange;
+  background-color: ${(props) => props.theme.primaryLight};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +16,6 @@ const StyledSection = styled.section`
 `;
 
 const Container = styled.div`
-  background-color: blue;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

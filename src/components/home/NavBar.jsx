@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledNavBar = styled.nav`
-  background: red;
   height: 70px;
   display: flex;
   align-items: center;
@@ -18,6 +17,7 @@ const StyledNavBar = styled.nav`
 `;
 
 const NavLink = styled.a`
+  color: ${(props) => props.theme.extraLight};
   font-weight: bold;
   text-decoration: none;
 `;

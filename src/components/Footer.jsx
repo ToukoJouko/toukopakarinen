@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
+  background-color: ${(props) => props.theme.primaryDark};
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: gray;
   height: 200px;
   position: relative;
 
@@ -17,7 +17,6 @@ const StyledFooter = styled.footer`
 `;
 
 const Social = styled.ul`
-  background-color: orange;
   display: flex;
   flex-direction: row;
   justify-content: center;

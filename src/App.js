@@ -5,15 +5,19 @@ import About from "./components/about/About";
 import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "styled-components";
+import theme from "./components/Theme";
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      <About></About>
-      <Resume></Resume>
-      <Projects></Projects>
-      <Footer></Footer>
+      <ThemeProvider theme={theme}>
+        <Header></Header>
+        <About></About>
+        <Resume></Resume>
+        <Projects></Projects>
+        <Footer></Footer>
+      </ThemeProvider>
     </div>
   );
 }
