@@ -21,12 +21,13 @@ const Container = styled.div`
   justify-content: space-between;
   width: 700px;
   max-width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   padding-right: 10px;
   padding-left: 10px;
 
   h2 {
-    width: 200px;
+    border-bottom: 2px solid ${(props) => props.theme.extraLight};
+    color: ${(props) => props.theme.extraDark};
   }
 
   .skills {
@@ -34,17 +35,26 @@ const Container = styled.div`
     flex-wrap: wrap;
     max-width: 400px;
     margin-bottom: 30px;
+    gap: 5px;
   }
 
   .skills > span {
-    padding: 3px;
+    padding: 5px;
+    background-color: ${(props) => props.theme.extraMid};
+    color: ${(props) => props.theme.extraDark};
   }
+`;
+
+const SkillsContainer = styled(Container)`
+  border: none;
 `;
 const Resume = () => {
   return (
     <StyledSection>
       <Container>
-        <h2>EDUCATION</h2>
+        <div>
+          <h2>EDUCATION</h2>
+        </div>
         <div>
           <Experience
             place={"University of Eastern Finland"}
@@ -62,7 +72,9 @@ const Resume = () => {
         </div>
       </Container>
       <Container>
-        <h2>WORK</h2>
+        <div>
+          <h2>WORK</h2>
+        </div>
         <div>
           <Experience
             place={"Nolwenture ltd."}
@@ -75,7 +87,9 @@ const Resume = () => {
         </div>
       </Container>
       <Container>
-        <h2>VOLUNTEERING</h2>
+        <div>
+          <h2>VOLUNTEERING</h2>
+        </div>
         <div>
           <Experience
             place={"Skripti ry"}
@@ -95,8 +109,10 @@ const Resume = () => {
           ></Experience>
         </div>
       </Container>
-      <Container>
-        <h2>SKILLS</h2>
+      <SkillsContainer>
+        <div>
+          <h2 className="skillsHeading">SKILLS</h2>
+        </div>
         <div className="skills">
           <span>JavaScript</span>
           <span>TypeScript</span>
@@ -106,8 +122,9 @@ const Resume = () => {
           <span>ReactJs</span>
           <span>NodeJs</span>
           <span>Jest</span>
+          <span>MongoDB</span>
         </div>
-      </Container>
+      </SkillsContainer>
     </StyledSection>
   );
 };

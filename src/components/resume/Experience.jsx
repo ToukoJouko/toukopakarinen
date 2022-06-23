@@ -11,6 +11,14 @@ const Container = styled.div`
     word-break: break-word;
     max-width: 400px;
   }
+
+  p {
+    color: ${(props) => props.theme.extraMid};
+  }
+
+  h3 {
+    color: ${(props) => props.theme.extraDark};
+  }
 `;
 
 const Experience = ({ place, title, duration, desc }) => {
@@ -18,7 +26,7 @@ const Experience = ({ place, title, duration, desc }) => {
     <Container>
       <h3>{place}</h3>
       <p>
-        {title}
+        <i>{title}</i>
         <span> • </span>
         {duration}
       </p>

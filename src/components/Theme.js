@@ -7,6 +7,8 @@ const theme = {
   extraMid: "gray",
   extraDark: "black",
   highlight: "#e8630a",
+  headingFont: "Abel, sans-serif",
+  textFont: "Anek Latin, sans-serif",
 };
 
 export default theme;

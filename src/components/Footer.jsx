@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   background-color: ${(props) => props.theme.primaryDark};
+  color: ${(props) => props.theme.secondaryDark};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +12,16 @@ const StyledFooter = styled.footer`
   position: relative;
 
   .back {
+    background-color: ${(props) => props.theme.extraMid};
+    color: ${(props) => props.theme.extraLight};
     position: absolute;
-    top: -5px;
+    top: -18px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  span {
+    margin-top: 30px;
   }
 `;
 
@@ -31,7 +40,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <a className="back">
-        <i class="fa-solid fa-circle-chevron-up fa-2xl"></i>
+        <i class="fa-solid fa-chevron-up fa-xl"></i>
       </a>
       <Social>
         <li>
@@ -55,6 +64,7 @@ const Footer = () => {
           </a>
         </li>
       </Social>
+      <span>Touko Pakarinen | Portfolio</span>
     </StyledFooter>
   );
 };

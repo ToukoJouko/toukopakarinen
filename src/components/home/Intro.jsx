@@ -6,7 +6,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
   margin-top: 10%;
 
   h1 {
@@ -21,6 +20,7 @@ const Container = styled.div`
     max-width: 700px;
     margin-left: 20px;
     margin-right: 20px;
+    line-height: 1.6;
   }
 
   div {
@@ -37,6 +37,7 @@ const Social = styled.ul`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
   gap: 20px;
   list-style-type: none;
   padding: 0;

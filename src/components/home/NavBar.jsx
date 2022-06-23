@@ -12,13 +12,15 @@ const StyledNavBar = styled.nav`
     display: flex;
     flex-direction: row;
     padding: 0;
-    gap: 10px;
+    gap: 20px;
   }
 `;
 
 const NavLink = styled.a`
   color: ${(props) => props.theme.extraLight};
   font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
   text-decoration: none;
 `;
 

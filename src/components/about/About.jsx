@@ -17,8 +17,8 @@ const Container = styled.div`
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   width: 700px;
 
   img {
@@ -33,6 +33,10 @@ const Container = styled.div`
 
   .about > .aboutText {
     display: block;
+
+    p {
+      line-height: 1.6;
+    }
   }
 
   .contact {
@@ -40,6 +44,10 @@ const Container = styled.div`
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+
+    div {
+      line-height: 1.6;
+    }
   }
 
   h2,
@@ -49,11 +57,16 @@ const Container = styled.div`
 
   a {
     background-color: ${(props) => props.theme.extraMid};
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-style: bold;
   }
 
   p,
   span {
     color: ${(props) => props.theme.extraMid};
+    font-size: 18px;
   }
 `;
 
@@ -80,7 +93,9 @@ const About = () => {
               <br />
               <span>toukop97@gmail.com</span>
             </div>
-            <a>Download Resume</a>
+            <a>
+              <h4>Download Resume</h4>
+            </a>
           </div>
         </div>
       </Container>
