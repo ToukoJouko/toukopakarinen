@@ -12,12 +12,17 @@ const StyledFooter = styled.footer`
   position: relative;
 
   .back {
-    background-color: ${(props) => props.theme.extraMid};
+    background-color: ${(props) => props.theme.primaryLight};
     color: ${(props) => props.theme.extraLight};
     position: absolute;
     top: -18px;
     border-radius: 50%;
     padding: 10px;
+    transition: background-color 0.7s;
+
+    &:hover {
+      background-color: ${(props) => props.theme.highlight};
+    }
   }
 
   span {
@@ -34,33 +39,37 @@ const Social = styled.ul`
   list-style-type: none;
   padding: 0;
   width: 20%;
+
+  a {
+    color: ${(props) => props.theme.secondaryDark};
+    transition: color 0.7s;
+
+    &:hover {
+      color: ${(props) => props.theme.primaryLight};
+    }
+  }
 `;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <a className="back">
-        <i class="fa-solid fa-chevron-up fa-xl"></i>
+      <a className="back" href="#home">
+        <i className="fa-solid fa-chevron-up fa-xl"></i>
       </a>
       <Social>
         <li>
-          <a>
-            <i class="fa-brands fa-linkedin-in fa-2xl fa-fw"></i>
+          <a href="https://www.linkedin.com/in/touko-pakarinen-3b13b0205/">
+            <i className="fa-brands fa-linkedin-in fa-2xl fa-fw"></i>
           </a>
         </li>
         <li>
-          <a>
-            <i class="fa-brands fa-github fa-2xl fa-fw"></i>
+          <a href="https://github.com/ToukoJouko">
+            <i className="fa-brands fa-github fa-2xl fa-fw"></i>
           </a>
         </li>
         <li>
-          <a>
-            <i class="fa-brands fa-telegram fa-2xl fa-fw"></i>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i class="fa-solid fa-envelope fa-2xl fa-fw"></i>
+          <a href="mailto:toukop97@gmail.com">
+            <i className="fa-solid fa-envelope fa-2xl fa-fw"></i>
           </a>
         </li>
       </Social>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
 import styled from "styled-components";
 import Experience from "./Experience";
 
@@ -9,7 +9,7 @@ const StyledSection = styled.section`
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding-top: 30px;
+  padding-top: 80px;
   padding-bottom: 40px;
   padding-right: 12vw;
   padding-left: 12vw;
@@ -21,13 +21,13 @@ const Container = styled.div`
   justify-content: space-between;
   width: 700px;
   max-width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${(props) => props.theme.secondaryDark};
   padding-right: 10px;
   padding-left: 10px;
 
   h2 {
-    border-bottom: 2px solid ${(props) => props.theme.extraLight};
-    color: ${(props) => props.theme.extraDark};
+    border-bottom: 2px solid ${(props) => props.theme.highlight};
+    color: ${(props) => props.theme.extraLight};
   }
 
   .skills {
@@ -48,9 +48,23 @@ const Container = styled.div`
 const SkillsContainer = styled(Container)`
   border: none;
 `;
-const Resume = () => {
+const Resume = React.forwardRef((props, ref) => {
+  const [height, setHeight] = useState(0);
+  const heightRef = useRef();
+
+  useEffect(() => {
+    setHeight(heightRef.current.offsetTop);
+    console.log(height);
+  }, []);
+
+  useImperativeHandle(ref, () => {
+    return {
+      height,
+    };
+  });
+
   return (
-    <StyledSection>
+    <StyledSection id="resume" ref={heightRef}>
       <Container>
         <div>
           <h2>EDUCATION</h2>
@@ -127,6 +141,6 @@ const Resume = () => {
       </SkillsContainer>
     </StyledSection>
   );
-};
+});
 
 export default Resume;

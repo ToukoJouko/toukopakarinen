@@ -14,10 +14,12 @@ const Container = styled.div`
 
   p {
     color: ${(props) => props.theme.extraMid};
+    margin-top: 10px;
+    line-height: 1.6;
   }
 
   h3 {
-    color: ${(props) => props.theme.extraDark};
+    color: ${(props) => props.theme.extraLight};
   }
 `;
 

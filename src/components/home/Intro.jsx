@@ -6,12 +6,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 10%;
 
   h1 {
     color: ${(props) => props.theme.extraLight};
     text-align: center;
     font-size: 6em;
+    margin-top: 15%;
   }
 
   h3 {
@@ -29,10 +29,18 @@ const Container = styled.div`
     bottom: 0;
     margin-bottom: 20px;
   }
+
+  a {
+    color: ${(props) => props.theme.extraLight};
+    transition: color 0.7s;
+
+    &:hover {
+      color: ${(props) => props.theme.highlight};
+    }
+  }
 `;
 
 const Social = styled.ul`
-  color: ${(props) => props.theme.extraLight};
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,29 +64,24 @@ const Intro = () => {
       </h3>
       <Social>
         <li>
-          <a>
-            <i class="fa-brands fa-linkedin-in fa-2xl fa-fw"></i>
+          <a href="https://www.linkedin.com/in/touko-pakarinen-3b13b0205/">
+            <i className="fa-brands fa-linkedin-in fa-2xl fa-fw"></i>
           </a>
         </li>
         <li>
-          <a>
-            <i class="fa-brands fa-github fa-2xl fa-fw"></i>
+          <a href="https://github.com/ToukoJouko">
+            <i className="fa-brands fa-github fa-2xl fa-fw"></i>
           </a>
         </li>
         <li>
-          <a>
-            <i class="fa-brands fa-telegram fa-2xl fa-fw"></i>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i class="fa-solid fa-envelope fa-2xl fa-fw"></i>
+          <a href="mailto:toukop97@gmail.com">
+            <i className="fa-solid fa-envelope fa-2xl fa-fw"></i>
           </a>
         </li>
       </Social>
       <div>
-        <a>
-          <i class="fa-solid fa-circle-chevron-down fa-2xl"></i>
+        <a href="#about">
+          <i className="fa-solid fa-circle-chevron-down fa-2xl"></i>
         </a>
       </div>
     </Container>

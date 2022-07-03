@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
 import styled from "styled-components";
 import facepic from "./facepic.jpg";
+import cv from "./CV Touko Pakarinen.pdf";
 
 const StyledSection = styled.section`
   background-color: ${(props) => props.theme.secondaryDark};
@@ -61,6 +62,12 @@ const Container = styled.div`
     border-radius: 8px;
     font-size: 18px;
     font-style: bold;
+    text-decoration: none;
+    transition: background-color 0.7s;
+
+    &:hover {
+      background-color: ${(props) => props.theme.highlight};
+    }
   }
 
   p,
@@ -70,9 +77,22 @@ const Container = styled.div`
   }
 `;
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
+  const [height, setHeight] = useState(0);
+  const heightRef = useRef();
+
+  useEffect(() => {
+    setHeight(heightRef.current.offsetTop);
+    console.log(height);
+  }, []);
+
+  useImperativeHandle(ref, () => {
+    return {
+      height,
+    };
+  });
   return (
-    <StyledSection>
+    <StyledSection id="about" ref={heightRef}>
       <Container>
         <img src={facepic} alt="facepic" width="170" height="170"></img>
         <div className="about">
@@ -93,14 +113,14 @@ const About = () => {
               <br />
               <span>toukop97@gmail.com</span>
             </div>
-            <a>
-              <h4>Download Resume</h4>
+            <a href={cv} target="_blank" rel="noopener noreferrer">
+              <h4>Download CV</h4>
             </a>
           </div>
         </div>
       </Container>
     </StyledSection>
   );
-};
+});
 
 export default About;

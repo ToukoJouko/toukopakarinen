@@ -6,12 +6,31 @@ const Container = styled.div`
   width: 200px;
   height: 200px;
   margin: 10px;
+  overflow: hidden;
+  position: relative;
 `;
 
-const SingleProject = () => {
+const Overlay = styled.div`
+  background-color: ${(props) => props.theme.secondaryDark};
+  color: ${(props) => props.theme.extraLight};
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    opacity: 0.5;
+  }
+`;
+
+const SingleProject = ({ image, name }) => {
   return (
     <Container>
-      <div></div>
+      <img src={image} alt="projectImage"></img>
+      <Overlay>
+        <h4>{name}</h4>
+        <span>Click for more info.</span>
+      </Overlay>
     </Container>
   );
 };
