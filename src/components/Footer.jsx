@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   position: relative;
 
   .back {
-    background-color: ${(props) => props.theme.primaryLight};
+    background-color: ${(props) => props.theme.secondaryDark};
     color: ${(props) => props.theme.extraLight};
     position: absolute;
     top: -18px;

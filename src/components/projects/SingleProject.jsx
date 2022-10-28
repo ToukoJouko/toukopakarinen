@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Sidesheet from "./Sidesheet";
 
 const Container = styled.div`
-  background-color: red;
+  position: relative;
+`;
+
+const OverlayContainer = styled.div`
   width: 200px;
   height: 200px;
   margin: 10px;
@@ -11,26 +15,38 @@ const Container = styled.div`
 `;
 
 const Overlay = styled.div`
-  background-color: ${(props) => props.theme.secondaryDark};
-  color: ${(props) => props.theme.extraLight};
-  opacity: 0;
+  color: rgba(255, 255, 255, 0);
   position: absolute;
   height: 100%;
   width: 100%;
+  transition: background-color 0.7s;
+
+  h4,
+  span {
+    padding: 20px;
+    transition: color 0.7s;
+  }
 
   &:hover {
-    opacity: 0.5;
+    background-color: rgba(16, 35, 109, 0.5);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
   }
 `;
 
 const SingleProject = ({ image, name }) => {
+  const [showSheet, setShowSheet] = useState(false);
+
   return (
     <Container>
-      <img src={image} alt="projectImage"></img>
-      <Overlay>
-        <h4>{name}</h4>
-        <span>Click for more info.</span>
-      </Overlay>
+      <OverlayContainer onClick={() => setShowSheet(true)}>
+        <img src={image} alt="projectImage"></img>
+        <Overlay>
+          <h4>{name}</h4>
+          <span>Click for more info.</span>
+        </Overlay>
+      </OverlayContainer>
+      {showSheet ? <Sidesheet></Sidesheet> : ""}
     </Container>
   );
 };

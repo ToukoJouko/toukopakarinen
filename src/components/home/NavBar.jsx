@@ -57,11 +57,6 @@ const Navbar = ({
             RESUME
           </a>
         </li>
-        <li>
-          <a href="#projects" className={projectsActive}>
-            PROJECTS
-          </a>
-        </li>
       </ul>
     </StyledNavBar>
   );
