@@ -57,10 +57,10 @@ const Intro = () => {
     <Container>
       <h1>I'm Touko Pakarinen.</h1>
       <h3>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        I am a student and an aspiring developer currently based in Joensuu.
+        Most of my experience is in fullstack development, but i am open to all
+        kinds of opportunities related to software development and the
+        IT-industry as a whole.
       </h3>
       <Social>
         <li>

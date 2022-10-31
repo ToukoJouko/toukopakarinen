@@ -99,9 +99,11 @@ const About = React.forwardRef((props, ref) => {
           <div className="aboutText">
             <h2>About Me</h2>
             <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
+              I am a 3rd year computer science major at the University of
+              Eastern Finland in Joensuu. My goal is to finish ny bachelor's
+              degree during 2023. In addition to my studies and programming, i
+              like to play the guitar, go to the gym and arrange different
+              student events.
             </p>
           </div>
           <div className="contact">
