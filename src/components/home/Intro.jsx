@@ -40,7 +40,9 @@ const Container = styled.div`
     transition: color 0.7s;
 
     &:hover {
-      color: ${(props) => props.theme.highlight};
+      @media (hover: hover) {
+        color: ${(props) => props.theme.highlight};
+      }
     }
   }
 `;

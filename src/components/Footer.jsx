@@ -45,7 +45,9 @@ const Social = styled.ul`
     transition: color 0.7s;
 
     &:hover {
-      color: ${(props) => props.theme.primaryLight};
+      @media (hover: hover) {
+        color: ${(props) => props.theme.primaryLight};
+      }
     }
   }
 `;

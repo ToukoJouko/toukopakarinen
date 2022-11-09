@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
 import styled from "styled-components";
 import facepic from "./facepic.png";
-import cv from "./CV Touko Pakarinen.pdf";
+import cv from "./Touko Pakarinen CV.pdf";
 import breakpoints from "../Breakpoints";
 
 const StyledSection = styled.section`
