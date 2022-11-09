@@ -68,7 +68,7 @@ const Container = styled.div`
   a {
     background-color: ${(props) => props.theme.extraMid};
     color: ${(props) => props.theme.extraLight};
-    padding: 15px;
+    padding: 15px 30px 15px;
     border-radius: 8px;
     font-size: 18px;
     font-style: bold;
@@ -132,7 +132,7 @@ const About = React.forwardRef((props, ref) => {
               <span>toukop97@gmail.com</span>
             </div>
             <a href={cv} target="_blank" rel="noopener noreferrer">
-              <h4>Download CV</h4>
+              <h4>Open CV</h4>
             </a>
           </div>
         </div>
