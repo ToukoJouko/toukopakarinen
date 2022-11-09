@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
 import styled from "styled-components";
-import facepic from "./facepic.jpg";
+import facepic from "./facepic.png";
 import cv from "./CV Touko Pakarinen.pdf";
+import breakpoints from "../Breakpoints";
 
 const StyledSection = styled.section`
   background-color: ${(props) => props.theme.secondaryDark};
@@ -22,8 +23,13 @@ const Container = styled.div`
   padding-bottom: 80px;
   width: 700px;
 
+  @media ${breakpoints.tablet} {
+    justify-content: center;
+  }
+
   img {
     border-radius: 100%;
+    border: solid 2px ${(props) => props.theme.extraLight};
   }
 
   .about {
@@ -51,22 +57,33 @@ const Container = styled.div`
     }
   }
 
-  h2,
-  a {
+  h2 {
     color: ${(props) => props.theme.extraLight};
+
+    @media ${breakpoints.tablet} {
+      margin-top: 20px;
+    }
   }
 
   a {
     background-color: ${(props) => props.theme.extraMid};
+    color: ${(props) => props.theme.extraLight};
     padding: 15px;
     border-radius: 8px;
     font-size: 18px;
     font-style: bold;
     text-decoration: none;
     transition: background-color 0.7s;
+    text-align: center;
+
+    @media ${breakpoints.mobile} {
+      width: 100%;
+    }
 
     &:hover {
-      background-color: ${(props) => props.theme.highlight};
+      @media (hover: hover) {
+        background-color: ${(props) => props.theme.highlight};
+      }
     }
   }
 
@@ -83,7 +100,6 @@ const About = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     setHeight(heightRef.current.offsetTop);
-    console.log(height);
   }, []);
 
   useImperativeHandle(ref, () => {
@@ -100,7 +116,7 @@ const About = React.forwardRef((props, ref) => {
             <h2>About Me</h2>
             <p>
               I am a 3rd year computer science major at the University of
-              Eastern Finland in Joensuu. My goal is to finish ny bachelor's
+              Eastern Finland in Joensuu. My goal is to finish my bachelor's
               degree during 2023. In addition to my studies and programming, i
               like to play the guitar, go to the gym and arrange different
               student events.

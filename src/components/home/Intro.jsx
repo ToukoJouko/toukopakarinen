@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import breakpoints from "../Breakpoints";
 
 const Container = styled.div`
   display: flex;
@@ -12,6 +13,10 @@ const Container = styled.div`
     text-align: center;
     font-size: 6em;
     margin-top: 15%;
+    @media ${breakpoints.tablet} {
+      font-size: 3em;
+      margin-top: 40%;
+    }
   }
 
   h3 {

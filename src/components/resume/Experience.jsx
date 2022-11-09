@@ -1,15 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import breakpoints from "../Breakpoints";
 
 const Container = styled.div`
   display: block;
-  max-width: 400px;
   margin-bottom: 30px;
+
+  @media ${breakpoints.tablet} {
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   p,
   h3 {
     word-break: break-word;
     max-width: 400px;
+    text-align: left;
+
+    @media ${breakpoints.tablet} {
+      text-align: center;
+    }
   }
 
   p {
