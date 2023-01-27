@@ -118,18 +118,18 @@ const Resume = React.forwardRef((props, ref) => {
         <div>
           <Experience
             place={"Skripti ry"}
-            title={"Sports- and event-organizer"}
-            duration={"January 2021 - Present"}
+            title={"Person in charge of social media and announcements"}
+            duration={"January 2023 - Present"}
             desc={
-              "Organized events, and arranged weekly exercise shifts for the members of Skripti ry."
+              "Created materials and advertisements for upcoming Skripti events and maintained Skriptis' social media platforms"
             }
           ></Experience>
           <Experience
             place={"Skripti ry"}
-            title={"Tutor"}
-            duration={"September 2021 - May 2022"}
+            title={"Sports- and event-organizer"}
+            duration={"January 2021 - December 2022"}
             desc={
-              "Taught basic university practices, and arranged events for the computer science freshmen of 2021."
+              "Organized events, and arranged weekly exercise shifts for the members of Skripti ry."
             }
           ></Experience>
         </div>
